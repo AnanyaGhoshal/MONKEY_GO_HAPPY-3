@@ -59,16 +59,19 @@ function setup() {
 function draw() {
 
   if (gameState === PLAY){
+     
      restart.visible = false;
      ground.velocityX = -(6+survivaltime/150);
      spawnFoods();
      spawnObstacles();
      if (keyDown("space")){
          monkey.velocityY = -12;
-         camera.position.y = monkey.y;
+         
     
   }
+    
   monkey.velocityY = monkey.velocityY + 0.8;
+  camera.position.y = monkey.y;
   
     
   if (monkey.isTouching(FoodGroup)){
